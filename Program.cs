@@ -1,10 +1,10 @@
-namespace heightCalculator;
+ï»¿namespace heightCalculator;
 class Program
 {
     public static void Main(string[] args)
     {
     start:
-        Console.Write("ÇëÊäÈëÄãµÄÉí¸ß (µ¥Î»:cm) :");
+        Console.Write("è¯·è¾“å…¥ä½ çš„èº«é«˜ (å•ä½:cm) :");
         string? result;
         int height;
         while (true)
@@ -12,42 +12,42 @@ class Program
             result = Console.ReadLine();
             if (!Int32.TryParse(result, out height))
             {
-                //·ÇÊýÖµ
-                Console.WriteLine("ÄúÊäÈëµÄÊý¾ÝÓÐÎó£¬ÇëÖØÐÂÊäÈë£¡");
+                //éžæ•°å€¼
+                Console.WriteLine("æ‚¨è¾“å…¥çš„æ•°æ®æœ‰è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥ï¼");
                 continue;
             }
             if (height > 250)
             {
-                Console.WriteLine("ÍâÐÇÈË£¿£¿£¿ÄãÖØÐÂÊäÈë°É£¡");
+                Console.WriteLine("å¤–æ˜Ÿäººï¼Ÿï¼Ÿï¼Ÿä½ é‡æ–°è¾“å…¥å§ï¼");
                 continue;
             }
             if (height >= 200)
             {
-                Console.WriteLine("ÎÒÃÇÑ§Ð£²»¿ÉÄÜ»áÓÐÄÇÃ´¸ßµÄ°É£¿£¿£¿£¬ÄãÖØÐÂÊäÈë°É£¡");
+                Console.WriteLine("æˆ‘ä»¬å­¦æ ¡ä¸å¯èƒ½ä¼šæœ‰é‚£ä¹ˆé«˜çš„å§ï¼Ÿï¼Ÿï¼Ÿï¼Œä½ é‡æ–°è¾“å…¥å§ï¼");
                 continue;
             } else if (height <= 0)
             {
-                Console.WriteLine("ÎÒ¸Ð¾õÄãÊÇ¾ÅÄêÒåÎñ½ÌÓýµÄÂ©ÍøÖ®Óã£¬ÄãÖØÐÂÊäÈë°É£¡");
+                Console.WriteLine("æˆ‘æ„Ÿè§‰ä½ æ˜¯ä¹å¹´ä¹‰åŠ¡æ•™è‚²çš„æ¼ç½‘ä¹‹é±¼ï¼Œä½ é‡æ–°è¾“å…¥å§ï¼");
                 continue;
             } else if (height <= 50)
             {
-                Console.WriteLine("ÎÒËµµÄÊÇÄãµÄÉí¸ß¶ø²»ÊÇ¶ùÍ¯µÄÉí¸ß£¡ÄãÖØÐÂÊäÈë°É£¡");
+                Console.WriteLine("æˆ‘è¯´çš„æ˜¯ä½ çš„èº«é«˜è€Œä¸æ˜¯å„¿ç«¥çš„èº«é«˜ï¼ä½ é‡æ–°è¾“å…¥å§ï¼");
                 continue;
             } else if (height <= 100) {
-                Console.WriteLine("Are you kidding me£¿ÄãÖØÐÂÊäÈë°É£¡");
+                Console.WriteLine("Are you kidding meï¼Ÿä½ é‡æ–°è¾“å…¥å§ï¼");
                 continue;
             } else if (height < 150)
             {
-                Console.WriteLine("ÎÒÃÇÑ§Ð£Ã»ÄÇÃ´°«µÄ°É£¬ÄãÖØÐÂÊäÈë°É£¡");
+                Console.WriteLine("æˆ‘ä»¬å­¦æ ¡æ²¡é‚£ä¹ˆçŸ®çš„å§ï¼Œä½ é‡æ–°è¾“å…¥å§ï¼");
                 continue;
             }
             break;
         }
-        ProcessBar("ÕýÔÚ¼ÓÔØÊý¾ÝÄ£ÐÍ", "Ä£ÐÍ¼ÓÔØÍê±Ï£¡", 3);
-        ProcessBar("ÕýÔÚ¹¹½¨ÊýÑ§Ä£ÐÍ", "Ä£ÐÍ¹¹½¨Íê±Ï£¡", 4);
-        ProcessBar("ÕýÔÚÄâºÏº¯ÊýÖÐ  ", "ÄâºÏÍê±Ï£¡", 2);
-        ProcessBar("ÊÕÁ²º¯ÊýÖÐ      ", "ÊÕÁ²Íê±Ï£¡", 4);
-        result = $"ÄúµÄÉí¸ßÊÇ£º{height}cm¡£";
+        ProcessBar("æ­£åœ¨åŠ è½½æ•°æ®æ¨¡åž‹", "æ¨¡åž‹åŠ è½½å®Œæ¯•ï¼", 3);
+        ProcessBar("æ­£åœ¨æž„å»ºæ•°å­¦æ¨¡åž‹", "æ¨¡åž‹æž„å»ºå®Œæ¯•ï¼", 4);
+        ProcessBar("æ­£åœ¨æ‹Ÿåˆå‡½æ•°ä¸­  ", "æ‹Ÿåˆå®Œæ¯•ï¼", 2);
+        ProcessBar("æ”¶æ•›å‡½æ•°ä¸­      ", "æ”¶æ•›å®Œæ¯•ï¼", 4);
+        result = $"æ‚¨çš„èº«é«˜æ˜¯ï¼š{height}cmã€‚";
         for (int i = 0; i < result.Length; i++)
         {
             Thread.Sleep(500);
@@ -55,20 +55,20 @@ class Program
             
         }
         Console.WriteLine();
-        Console.WriteLine("Çë°´ÈÎÒâ¼üÍË³ö : )");
+        Console.WriteLine("è¯·æŒ‰ä»»æ„é”®é€€å‡º : )");
         Console.ReadKey();
     }
 
     public static void ProcessBar(string title,  string success, double time)
     {
         int index = 0;
-        char waitChar = '©¤';
-        char processChar = '¨€';
+        char waitChar = 'â”€';
+        char processChar = 'â–ˆ';
         int end = 80;
         int now = 0;
         for (; index <= end; index++)
         {
-            string outStr = $"\r{title}£º©À{Concat(index, processChar, end - index, waitChar)}©È{now}%";
+            string outStr = $"\r{title}ï¼šâ”œ{Concat(index, processChar, end - index, waitChar)}â”¤{now}%";
             Console.Write(outStr);
             Thread.Sleep((int)(time * 1000.0 / end));
             now = (int) (((double) index + 1) * 100 / (double)end);
