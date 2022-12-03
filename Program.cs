@@ -3,7 +3,6 @@ class Program
 {
     public static void Main(string[] args)
     {
-    start:
         Console.Write("请输入你的身高 (单位:cm) :");
         string? result;
         int height;
